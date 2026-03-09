@@ -1,0 +1,168 @@
+/* css/contact.css - Fixed and Optimized Version */
+
+.contact-hero {
+    width: 100%;
+    min-height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url('../images/contentUs-overhtml-page-hero.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 120px 20px 80px; /* Accounts for fixed navbar */
+}
+
+.contact-hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--primary-color); /* Matches theme: orange */
+}
+
+.contact-hero-content p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-gray);
+    line-height: 1.7;
+}
+
+/* Years of Experience Section (new addition for contact page) */
+.exp {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 60px 20px;
+    background-color: #111;
+    text-align: center;
+}
+
+.your_of_exp {
+    min-width: 180px;
+}
+
+.years {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.your_of_exp h4 {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Override/Fix for contact section background (already partially defined in style.css) */
+#contact.contact {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+                url('../image/contect-us-bg.jpg') center/cover no-repeat;
+    padding: 100px 50px;
+}
+
+/* Ensure form and address layout is responsive and centered */
+.form-and-address-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Fix icon hover effects consistency */
+.Icons-phone-call-img:hover,
+.Icons-Email-img:hover,
+.address-info-Website-img:hover,
+.address-info-Address-img:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Social icons hover improvement */
+.social-links-follow a:hover img {
+    filter: brightness(0) invert(1); /* Keep white on colored background */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .contact-hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .exp {
+        gap: 30px;
+        padding: 50px 20px;
+    }
+
+    .years {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-hero {
+        min-height: 50vh;
+        padding: 100px 20px 60px;
+    }
+
+    .contact-hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .contact-hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .exp {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 50px 20px;
+    }
+
+    .your_of_exp {
+        min-width: unset;
+    }
+
+    #contact.contact {
+        padding: 80px 30px;
+    }
+
+    .form-and-address-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        padding: 0 20px;
+    }
+
+    .form-wrapper,
+    .address-wrapper {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .contact-hero-content p {
+        font-size: 1rem;
+    }
+
+    .years {
+        font-size: 2.5rem;
+    }
+
+    .your_of_exp h4 {
+        font-size: 1.1rem;
+    }
+
+    .contact-title h1 {
+        font-size: 2rem;
+    }
+}

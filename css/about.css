@@ -1,0 +1,232 @@
+.about-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../image/about-bg.jpg');
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding: 0;
+}
+
+.about-hero .hero-cantaner {
+    margin: auto 0 auto 120px;
+}
+
+.about-main {
+    background: #111;
+    padding: 100px 50px;
+}
+
+.about-choose {
+    background: var(--bg-dark);
+    padding-bottom: 120px;
+}
+
+.team-section {
+    padding: 100px 50px;
+    background: var(--bg-dark);
+}
+
+.team-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.team-member {
+    background: #1e1e1e;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.team-info {
+    padding: 25px;
+}
+
+.team-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+.team-info span {
+    display: block;
+    color: var(--text-gray);
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.team-info p {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.awards-section {
+    padding: 100px 50px;
+    background: #111;
+}
+
+.timeline {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 20px 40px;
+    position: relative;
+    width: 50%;
+    margin-bottom: 60px;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border: 4px solid #111;
+    border-radius: 50%;
+    top: 25px;
+    right: -10px;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -10px;
+}
+
+.timeline-content {
+    background: #252525;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.timeline-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.testimonials {
+    padding: 100px 50px;
+    background: var(--bg-dark);
+}
+
+.testimonial-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: center;
+    border-top: 4px solid var(--primary-color);
+}
+
+.testimonial-card i {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: var(--text-gray);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.testimonial-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.testimonial-card span {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.about-mission{
+    background: #111;
+}
+
+@media (max-width: 992px) {
+    .timeline::before {
+        left: 20px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 0;
+        text-align: left !important;
+    }
+    .timeline-item::before {
+        left: 10px !important;
+        right: auto;
+    }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero .hero-cantaner {
+        margin: auto 20px;
+        text-align: center;
+    }
+    .about-hero .hero-container h1 {
+        font-size: 48px;
+    }
+    .team-section,
+    .awards-section,
+    .testimonials {
+        padding: 80px 20px;
+    }
+}
